@@ -1,0 +1,93 @@
+/*.intro {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  overflow: hidden;
+  @include media-breakpoint-up(md) {
+    padding-top: 140px;
+    padding-bottom: 140px;
+  }*/
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.intro .social {
+  display: flex;
+  justify-content: center;
+  color: var(--color-base-text);
+  padding: 3px 32px;
+  border-radius: 50px;
+}
+.intro .buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.intro h1, .intro .h1, .intro h2, .intro .h2 {
+  font-size: 44px;
+  line-height: 1.1;
+  font-weight: 600;
+  margin-bottom: 20px;
+  margin-top: 0;
+  color: var(--color-base-text);
+}
+.intro p {
+  font-size: 26px;
+  line-height: 1.3;
+  font-weight: 300;
+  color: var(--color-base-text-2);
+}
+.intro img {
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+.intro .avatar {
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+
+  h1 {
+    color: $black;
+    font-size: 42px;
+    font-weight: bold;
+    line-height: 1.2;
+    @include media-breakpoint-up(md) {
+      width: 80%;
+      font-size: 48px;
+    }
+    @include media-breakpoint-up(lg) {
+      font-size: 50px;
+    }
+  }
+  h2 {
+    width: 80%;
+    font-size: 1.2rem;
+    line-height: 1.4;
+    margin-bottom: 30px;
+    color: $black;
+    font-family: $font-family-base;
+  }
+  p {
+    font-size: 1.2rem;
+    font-weight: light;
+    line-height: 1.5;
+    color: $steel;
+    @include media-breakpoint-up(md) {
+      width: 80%;
+    }
+  }
+
+.intro-small {
+  padding-top: 100px;
+  padding-bottom: 30px;
+}
