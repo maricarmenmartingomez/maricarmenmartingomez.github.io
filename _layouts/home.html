@@ -7,16 +7,22 @@ bodyClass: "page-home"
   <div class="container">
     <div class="row justify-content-start">
       <div class="col-12 col-md-10">
-        {{ content }}
-        {% if page.show_call_box %}
-          {% include call.html show_button=true %}
+        {% if page.lead and page.lead.enabled %}
+          <section class="lead mb-4">
+            <h1 class="lead-heading">{{ page.lead.heading }}</h1>
+            <div class="lead-description">{{ page.lead.description | markdownify }}</div>
+            {% if page.lead.avatar and page.lead.avatar.avatar_image %}
+              <img class="lead-avatar mt-3" src="{{ page.lead.avatar.avatar_image | relative_url }}" alt="{{ page.lead.avatar.alt }}" style="width:{{ page.lead.avatar.avatar_image_width }};height:{{ page.lead.avatar.avatar_image_height }};" />
+            {% endif %}
+            {% if page.lead.buttons %}
+              <p class="mt-3">
+                {% for b in page.lead.buttons %}
+                  <a class="button button-primary" href="{{ b.button.url }}" {% if b.button.external %}target="_blank" rel="noopener"{% endif %}>{{ b.button.text }}</a>
+                {% endfor %}
+              </p>
+            {% endif %}
+          </section>
         {% endif %}
-      </div>
-      {% if page.intro_image %}
-      <div class="col-12 col-md-5 col-lg-6 order-1 order-md-2 position-relative">
-        <img alt="{{ page.title }}" class="intro-image{% if page.intro_image_absolute %} intro-image-absolute{% endif %}{% if page.intro_image_hide_on_mobile %} intro-image-hide-mobile{% endif %}" src="{{ page.intro_image | relURL }}" />
-      </div>
-      {% endif %}
     </div>
   </div>
 </div>
