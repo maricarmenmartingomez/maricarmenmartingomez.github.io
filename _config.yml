@@ -1,4 +1,5 @@
-baseurl: '/'
+baseurl: ""
+url: "https://maricarmenmartingomez.github.io"
 permalink: pretty
 title: 'Growth Theme'
 
@@ -94,7 +95,7 @@ fonts:
 
 
 plugins:
-  - jekyll-environment-variables
+  # - jekyll-environment-variables
 
 exclude:
   - Gemfile
