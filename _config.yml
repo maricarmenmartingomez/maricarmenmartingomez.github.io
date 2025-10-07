@@ -94,8 +94,7 @@ fonts:
   logo: "Schibsted Grotesk"
 
 
-plugins:
-  # - jekyll-environment-variables
+plugins: []   # establecer como array vacío para evitar error en el build de Pages
 
 exclude:
   - Gemfile

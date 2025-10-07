@@ -17,7 +17,7 @@ bodyClass: "page-home"
             {% if page.lead.buttons %}
               <p class="mt-3">
                 {% for b in page.lead.buttons %}
-                  <a class="button button-primary" href="{{ b.button.url }}" {% if b.button.external %}target="_blank" rel="noopener"{% endif %}>{{ b.button.text }}</a>
+                  <a class="status" href="{{ b.button.url }}" {% if b.button.external %}target="_blank" rel="noopener"{% endif %}>{{ b.button.text }}</a>
                 {% endfor %}
               </p>
             {% endif %}
