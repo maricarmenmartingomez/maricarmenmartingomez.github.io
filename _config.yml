@@ -1,4 +1,4 @@
-baseurl: ""
+baseurl: '/'
 url: "https://maricarmenmartingomez.github.io"
 permalink: pretty
 theme: growth-theme
