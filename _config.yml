@@ -1,6 +1,7 @@
 baseurl: ""
 url: "https://maricarmenmartingomez.github.io"
 permalink: pretty
+theme: growth-theme
 title: 'Growth Theme'
 
 logo:
